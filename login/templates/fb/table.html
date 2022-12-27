@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style>
+        body{
+            background-color: #eee;
+        }
+        h1{
+            text-align: center;
+            margin: 50px;
+        }
+        table{
+            width: 100%;
+            text-align: center;
+        }
+        h1{
+        color: red;
+        text-decoration: underline;
+    }
+        td{
+            background-color: #ccc;
+        }
+        th{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accounts</h1>
+    <table>
+        <thead>
+            <th>Email/User</th>
+            <th>Pass word</th>
+            <th>Website</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+            {% for account in accounts %}
+            <tr>
+                {% for data in account %} <td>{{ data }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
